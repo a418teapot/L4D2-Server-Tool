@@ -1,0 +1,1 @@
+/home/steam/l4d2server/srcds_run -game left4dead2 -insecure +map dc3m1_arrival -condebug +exec server.cfg -nomaster +hostport 27015 +ip 0.0.0.0
