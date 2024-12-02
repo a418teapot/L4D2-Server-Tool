@@ -90,7 +90,8 @@ int main()
 	system("pip install paramiko");
 	cout<<"正在安装pyperclip"<<endl;
 	system("pip install pyperclip");
-	
+	cout<<"正在创建文件夹"<<endl;
+	system("cd server&python folder_creat.py");
 	system("cls");
 	while(1)
 	{
