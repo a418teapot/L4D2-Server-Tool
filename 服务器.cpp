@@ -88,6 +88,9 @@ int main()
 	SetConsoleOutputCP(CP_UTF8);  // 设置控制台输出为 UTF-8 编码
 	cout<<"正在安装paramiko"<<endl;
 	system("pip install paramiko");
+	cout<<"正在安装pyperclip"<<endl;
+	system("pip install pyperclip");
+	
 	system("cls");
 	while(1)
 	{
@@ -281,7 +284,11 @@ int main()
 		    default : // 可选的
 		       cout<<"无法匹配choose！";
 		}
-		cout<<"命令执行完毕";
+		cout<<"命令执行完毕"<<endl;
+		cout<<endl;
+		system("cd server&python paste.py");
+		cout<<"已将加入服务器指令发送到剪贴板";
+		
 		getch();
 		system("cls");
 	}
