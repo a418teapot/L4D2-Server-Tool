@@ -32,7 +32,8 @@ int keyboard_listen()//读取键盘输入-函数
 {
 	int ch;
     if (_kbhit()){//如果有按键按下，则_kbhit()函数返回真，_kbhit()不会读入缓冲区的按键数据，按键数据会保留并交由getch()读取 
-    
+    	gotoxy(0,28);
+    	cout<<"\r                                                           ";
         ch = getch();//使用bioskey()函数获取按下的键值
 //		printf("%d",ch);
         switch(ch){
@@ -72,7 +73,8 @@ int keyboard_listen()//读取键盘输入-函数
 				break;
 				
 			default:
-				cout<<"ERROR,WRONG INPUT!\r";
+				gotoxy(0,28);
+				cout<<"\rERROR,WRONG INPUT "<< (char) ch <<" ! Please use wasd to choose\r";
 				return 0;
 				break;
 				
@@ -87,9 +89,9 @@ int main()
 	hide_cursor();
 	SetConsoleOutputCP(CP_UTF8);  // 设置控制台输出为 UTF-8 编码
 	cout<<"正在安装paramiko"<<endl;
-	system("pip install paramiko");
+	system("pip install --upgrade paramiko");
 	cout<<"正在安装pyperclip"<<endl;
-	system("pip install pyperclip");
+	system("pip install --upgrade pyperclip");
 	cout<<"正在创建文件夹"<<endl;
 	system("cd server&python folder_creat.py");
 	system("cls");

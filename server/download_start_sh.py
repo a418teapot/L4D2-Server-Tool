@@ -6,14 +6,6 @@ port = 22
 username = 'steam'
 password = 'myszm2024'
 
-try:
-    # 创建一个名为"start"的文件夹
-    path = "start"
-    os.mkdir(path)
-    print("Folder not exists!")
-except:
-    print("Folder already exists!")
-
 # 创建SSH传输通道
 transport = paramiko.Transport((hostname, port))
 transport.connect(username=username, password=password)
