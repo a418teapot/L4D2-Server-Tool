@@ -1,7 +1,10 @@
 import paramiko
 
 # 设置SSH连接参数
-hostname = '42.193.239.156'
+with open("hostname.txt", "r") as f:  # 打开文件
+    hostname = f.read()  # 读取文件
+    
+
 port = 22
 username = 'steam'
 password = 'myszm2024'

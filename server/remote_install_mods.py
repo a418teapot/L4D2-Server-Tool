@@ -36,7 +36,9 @@ def upload_file_with_progress(hostname, username, password, remote_path, local_p
  
 if __name__ == "__main__":
     # hostname = "*****"
-    hostname = "42.193.239.156"
+    # 设置SSH连接参数
+    with open("hostname.txt", "r") as f:  # 打开文件
+    hostname = f.read()  # 读取文件
     port = 22
     # username = "********"
     username = "steam"
