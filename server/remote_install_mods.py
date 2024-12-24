@@ -38,12 +38,13 @@ if __name__ == "__main__":
     # hostname = "*****"
     # 设置SSH连接参数
     with open("hostname.txt", "r") as f:  # 打开文件
-    hostname = f.read()  # 读取文件
-    port = 22
-    # username = "********"
-    username = "steam"
-    # password = "*****"
-    password = "myszm2024"
+        hostname = f.read()  # 读取文件
+    with open("port.txt", "r") as f:  # 打开文件
+        port = int(f.read())  # 读取文件
+    with open("username.txt", "r") as f:  # 打开文件
+        username = f.read()  # 读取文件
+    with open("password.txt", "r") as f:  # 打开文件
+        password = f.read()  # 读取文件
     remote_path_upload = "/home/steam/l4d2server/left4dead2/addons/"
     local_path_upload = ".\\maps\\"
     file_list=getfiles()
