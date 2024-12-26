@@ -2,18 +2,8 @@ import os
 import paramiko
 import time
 
-try:
-    # 创建一个名为"maps"的文件夹
-    path = "maps"
-    os.mkdir(path)
-    print("Folder not exists!")
-    input()
-    exit()
-except:
-    print("Folder already exists!")
-
 def getfiles():
-    filenames=os.listdir(r'.\\maps')
+    filenames=os.listdir(r'..\\maps')
     return filenames
 
 def upload_file_with_progress(hostname, username, password, remote_path, local_path):
@@ -37,16 +27,16 @@ def upload_file_with_progress(hostname, username, password, remote_path, local_p
 if __name__ == "__main__":
     # hostname = "*****"
     # 设置SSH连接参数
-    with open("hostname.txt", "r") as f:  # 打开文件
+    with open("../hostname.txt", "r") as f:  # 打开文件
         hostname = f.read()  # 读取文件
-    with open("port.txt", "r") as f:  # 打开文件
+    with open("../port.txt", "r") as f:  # 打开文件
         port = int(f.read())  # 读取文件
-    with open("username.txt", "r") as f:  # 打开文件
+    with open("../username.txt", "r") as f:  # 打开文件
         username = f.read()  # 读取文件
-    with open("password.txt", "r") as f:  # 打开文件
+    with open("../password.txt", "r") as f:  # 打开文件
         password = f.read()  # 读取文件
     remote_path_upload = "/home/steam/l4d2server/left4dead2/addons/"
-    local_path_upload = ".\\maps\\"
+    local_path_upload = "..\\maps\\"
     file_list=getfiles()
 
     for file_name in file_list:

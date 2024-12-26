@@ -1,13 +1,13 @@
 import paramiko
 
 # 设置SSH连接参数
-with open("hostname.txt", "r") as f:  # 打开文件
+with open("../hostname.txt", "r") as f:  # 打开文件
     hostname = f.read()  # 读取文件
-with open("port.txt", "r") as f:  # 打开文件
+with open("../port.txt", "r") as f:  # 打开文件
     port = int(f.read())  # 读取文件
-with open("username.txt", "r") as f:  # 打开文件
+with open("../username.txt", "r") as f:  # 打开文件
     username = f.read()  # 读取文件
-with open("password.txt", "r") as f:  # 打开文件
+with open("../password.txt", "r") as f:  # 打开文件
     password = f.read()  # 读取文件
 
 # 创建SSH客户端

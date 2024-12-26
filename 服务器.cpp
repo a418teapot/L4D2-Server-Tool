@@ -94,6 +94,8 @@ int main()
 	system("pip install --upgrade pyperclip");
 	cout<<"正在创建文件夹"<<endl;
 	system("cd server&python folder_creat.py");
+	cout<<"正在创建文件"<<endl;
+	system("cd server&python initialize.py");
 	system("cls");
 	while(1)
 	{

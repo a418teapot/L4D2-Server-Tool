@@ -18,7 +18,7 @@ transport.connect(username=username, password=password)
 sftp = paramiko.SFTPClient.from_transport(transport)
 
 # 下载远程文件到本地
-local_path = '.\\start\\start.sh'
+local_path = '..\\start\\start.sh'
 remote_path = '/home/steam/l4d2server/start.sh'
 sftp.get(remote_path, local_path)
 
